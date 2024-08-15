@@ -9,7 +9,7 @@ pipeline{
         RELEASE = "1.0.0"
         docker_USER = "youzarou"
         DOCKER_PASS = 'jenkins-sonar-docker'
-        IMAGE_NAME = "${docker_USER}" * "/" * "${APP_NAME}"
+        IMAGE_NAME = "${docker_USER}" + "/" + "${APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     } 
     stages{
