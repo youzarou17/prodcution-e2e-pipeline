@@ -62,7 +62,7 @@ pipeline{
          stage("build & push docker image") {
             steps {
                 script {
-                    dockerwithRegistry('',DOCKER_PASS) {
+                    docker.withRegistry('',DOCKER_PASS) {
                         docker_image = docker.build "${IMAGE_NAME}"
                     }
                     dockerwithRegistry('',DOCKER_PASS) {
